@@ -1,0 +1,73 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #c8daea;
+    margin: 0;
+    padding: 10px 20px; 
+    color: #333;
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: space-evenly; 
+    height: 100vh; 
+    overflow: hidden; 
+    box-sizing: border-box;
+}
+
+.contenedor-mensajes {
+    text-align: center; 
+    margin-bottom: 5px;
+    flex-shrink: 0;
+}
+
+.contenedor-mensajes h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #007bff;
+    margin: 0;
+}
+
+#mensaje-display {
+    font-size: 1.8rem;
+    color: #000000; 
+    margin-top: 5px;
+    font-weight: 600;
+    min-height: 1.2em; 
+}
+
+#video-incubadora {
+    width: auto; 
+    height: auto;
+    max-width: 90%; 
+    max-height: 60vh; 
+    border-radius: 10px;
+    background-color: #000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin: 10px 0;
+    object-fit: contain; 
+}
+
+.botonVolver {
+    display: inline-block;
+    padding: 14px 30px;
+    margin-top: 10px;
+    flex-shrink: 0;
+    background-color: #ffffff; 
+    color: #333; 
+    border: 1px solid #ddd; 
+    font-size: 1rem;
+    font-weight: 700; 
+    text-decoration: none; 
+    text-transform: uppercase; 
+    letter-spacing: 0.5px;
+    border-radius: 8px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.botonVolver:hover {
+    background-color: #007bff; 
+    color: #ffffff; 
+    border-color: #007bff;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(0, 123, 255, 0.3);
+}

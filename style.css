@@ -1,0 +1,91 @@
+body, html {
+    box-sizing: border-box;
+    line-height: 1.5;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #c8daea;
+    margin: 0;
+    color: #333;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; 
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 1rem; 
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: flex-start; 
+    min-height: 100vh;
+    padding: 1rem;
+    padding-top: 10vh; 
+    box-sizing: border-box; 
+}
+
+.main-container h1 {
+    font-size: 45px; 
+    font-weight: 700; 
+    color: #000000; 
+    margin-bottom: 2rem; 
+    margin-top: 0;
+    text-align: center;
+}
+
+.login-card {
+    background-color: #ffffff;
+    padding: 2rem; 
+    border-radius: 0.75rem; 
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); 
+    width: 100%;
+    max-width: 24rem; 
+    text-align: center;
+}
+
+.login-card h2 {
+    color: #4b5563; 
+    margin-bottom: 2rem;
+    font-size: 1.125rem; 
+    font-weight: 400;
+    margin-top: 0;
+}
+
+.login-card input[type="text"] {
+    width: 100%;
+    padding: 0.75rem 1rem; 
+    border: 1px solid #d1d5db; 
+    border-radius: 0.5rem; 
+    text-align: center;
+    font-size: 1.125rem; 
+    margin-bottom: 1.5rem; 
+    transition: all 0.15s ease-in-out;
+    box-sizing: border-box; 
+}
+
+.login-card input[type="text"]:focus {
+    outline: 2px solid #3b82f6; 
+    outline-offset: 2px;
+    border-color: transparent;
+}
+
+.login-card .botonComenzar {
+    display: block; 
+    width: 100%;
+    background-color: #2563eb; 
+    color: #ffffff; 
+    padding: 0.75rem 0; 
+    border-radius: 0.5rem; 
+    font-size: 1.125rem; 
+    font-weight: 600; 
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); 
+    text-decoration: none;
+    transition: background-color 0.15s ease-in-out;
+    box-sizing: border-box;
+}
+
+.login-card .botonComenzar:hover {
+    background-color: #1d4ed8; 
+}

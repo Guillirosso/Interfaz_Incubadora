@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Control - Incubadoras</title>
+    <link rel="stylesheet" href="styleIndex.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-titulo">
+            <h1>Panel de Control </h1>
+        </div>
+        <div class="controles-header-index">
+            <button id="habilitar-audio-btn" class="boton-header">Habilitar Audio</button>
+            <div id="seccionAgregar" class="seccion-agregar">
+                <input type="text" placeholder="Ingrese Nro. Incubadora" id="nuevoNroSerie" required> 
+                <input type="button" value="Agregar" id="botonAgregar" class="boton-header">
+            </div>
+        </div>
+    </header>
+
+    <div id="panel-incubadoras">
+
+        <article class="incubadora-card" id="inc-1">
+            <button class="boton-eliminar">×</button> <h2>Incubadora 1:</h2>
+            <div class="datos-actuales">
+                <div class="dato">
+                    <span class="etiqueta">Temperatura Aire</span>
+                    <span class="valor" id="temp-aire-1">-- °C</span>
+                </div>
+                <div class="dato">
+                    <span class="etiqueta">Temperatura Piel</span>
+                    <span class="valor" id="temp-piel-1">-- °C</span>
+                </div>
+                <div class="dato">
+                    <span class="etiqueta">Humedad</span>
+                    <span class="valor" id="humedad-1">-- %</span>
+                </div>
+            </div>
+            <div class="dato-peso">
+                <span class="etiqueta">Último Peso:</span>
+                <span class="valor-peso" id="peso-1">-- g</span>
+            </div>
+            <a href="tendencias.html?id=1" class="boton-detalles">Ver Gráficos</a>
+        </article>
+
+        <article class="incubadora-card" id="inc-2">
+            <button class="boton-eliminar">×</button> <h2>Incubadora 2:</h2>
+            <div class="datos-actuales">
+                <div class="dato">
+                    <span class="etiqueta">Temperatura Aire</span>
+                    <span class="valor" id="temp-aire-2">-- °C</span>
+                </div>
+                <div class="dato">
+                    <span class="etiqueta">Temperatura Piel</span>
+                    <span class="valor" id="temp-piel-2">-- °C</span>
+                </div>
+                <div class="dato">
+                    <span class="etiqueta">Humedad</span>
+                    <span class="valor" id="humedad-2">-- %</span>
+                </div>
+            </div>
+            <div class="dato-peso">
+                <span class="etiqueta">Último Peso:</span>
+                <span class="valor-peso" id="peso-2">-- g</span>
+            </div>
+            <a href="tendencias.html?id=2" class="boton-detalles">Ver Gráficos</a>
+        </article>
+
+        <article class="incubadora-card" id="inc-3">
+            <button class="boton-eliminar">×</button><h2>Incubadora 3:</h2>
+            <div class="datos-actuales">
+                <div class="dato">
+                    <span class="etiqueta">Temperatura Aire</span>
+                    <span class="valor" id="temp-aire-3">-- °C</span>
+                </div>
+                <div class="dato">
+                    <span class="etiqueta">Temperatura Piel</span>
+                    <span class="valor" id="temp-piel-3">-- °C</span>
+                </div>
+                <div class="dato">
+                    <span class="etiqueta">Humedad</span>
+                    <span class="valor" id="humedad-3">-- %</span>
+                </div>
+            </div>
+            <div class="dato-peso">
+                <span class="etiqueta">Último Peso:</span>
+                <span class="valor-peso" id="peso-3">-- g</span>
+            </div>
+            <a href="tendencias.html?id=3" class="boton-detalles">Ver Gráficos</a>
+        </article>
+
+        <article class="incubadora-card" id="inc-4">
+            <button class="boton-eliminar">×</button><h2>Incubadora 4:</h2>
+            <div class="datos-actuales">
+                <div class="dato">
+                    <span class="etiqueta">Temperatura Aire</span>
+                    <span class="valor" id="temp-aire-4">-- °C</span>
+                </div>
+                <div class="dato">
+                    <span class="etiqueta">Temperatura Piel</span>
+                    <span class="valor" id="temp-piel-4">-- °C</span>
+                </div>
+                <div class="dato">
+                    <span class="etiqueta">Humedad</span>
+                    <span class="valor" id="humedad-4">-- %</span>
+                </div>
+            </div>
+            <div class="dato-peso">
+                <span class="etiqueta">Último Peso:</span>
+                <span class="valor-peso" id="peso-4">-- g</span>
+            </div>
+            <a href="tendencias.html?id=4" class="boton-detalles">Ver Gráficos</a>
+        </article>
+
+        <article class="incubadora-card" id="inc-5">
+            <button class="boton-eliminar">×</button><h2>Incubadora 5:</h2>
+            <div class="datos-actuales">
+                <div class="dato">
+                    <span class="etiqueta">Temperatura Aire</span>
+                    <span class="valor" id="temp-aire-5">-- °C</span>
+                </div>
+                <div class="dato">
+                    <span class="etiqueta">Temperatura Piel</span>
+                    <span class="valor" id="temp-piel-5">-- °C</span>
+                </div>
+                <div class="dato">
+                    <span class="etiqueta">Humedad</span>
+                    <span class="valor" id="humedad-5">-- %</span>
+                </div>
+            </div>
+            <div class="dato-peso">
+                <span class="etiqueta">Último Peso:</span>
+                <span class="valor-peso" id="peso-5">-- g</span>
+            </div>
+            <a href="tendencias.html?id=5" class="boton-detalles">Ver Gráficos</a>
+        </article>
+
+        <article class="incubadora-card" id="inc-6">
+            <button class="boton-eliminar">×</button><h2>Incubadora 6:</h2>
+            <div class="datos-actuales">
+                <div class="dato">
+                    <span class="etiqueta">Temperatura Aire</span>
+                    <span class="valor" id="temp-aire-6">-- °C</span>
+                </div>
+                <div class="dato">
+                    <span class="etiqueta">Temperatura Piel</span>
+                    <span class="valor" id="temp-piel-6">-- °C</span>
+                </div>
+                <div class="dato">
+                    <span class="etiqueta">Humedad</span>
+                    <span class="valor" id="humedad-6">-- %</span>
+                </div>
+            </div>
+            <div class="dato-peso">
+                <span class="etiqueta">Último Peso:</span>
+                <span class="valor-peso" id="peso-6">-- g</span>
+            </div>
+            <a href="tendencias.html?id=6" class="boton-detalles">Ver Gráficos</a>
+        </article>
+
+    </div> 
+    <audio id="alarma-sonora" src="sonido-alarma.mp3" loop></audio>    
+    <script src="javaScript.js"></script> 
+</body>
+</html>

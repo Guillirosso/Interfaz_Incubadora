@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tendencias Incubadora</title>
+    <link rel="stylesheet" href="styleTendencias.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="header-controles">
+            <h1>Tendencias Incubadora: <span id="incubadora-id-display"></span></h1>
+            <div class="botones-header">
+                <button class="boton-panel" id="botonRegistroAlarmas">
+                    Registro de Alarmas
+                </button>
+                <a href="index.html" class="boton-panel">
+                    ← Volver al Panel
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="grid-graficos">
+        <div class="grafico-card">
+            <h2>Temperatura del Aire (°C)</h2>
+            <canvas id="graficoTempAire"></canvas>
+        </div>
+
+        <div class="grafico-card">
+            <h2>Temperatura de Piel (°C)</h2>
+            <canvas id="graficoTempPiel"></canvas>
+        </div>
+
+        <div class="grafico-card">
+            <h2>Humedad (%)</h2>
+            <canvas id="graficoHumedad"></canvas>
+        </div>
+
+        <div class="grafico-card">
+            <div class="grafico-header">
+                <h2>Historial de Peso</h2>
+                <a href="balanza.html" class="boton-pesar">Tutorial</a>
+            </div>
+            <canvas id="graficoPeso"></canvas>
+        </div>
+    </main>
+
+    <div id="modal-backdrop">
+        <div id="modal-alarma">
+            <button id="modal-cerrar-btn">×</button>
+            <h2>Registro de Alarmas</h2>
+            <div id="contenido-alarma">
+                <p>Cargando...</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="javaScript.js"></script>
+    
+</body>
+</html>
