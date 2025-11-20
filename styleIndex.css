@@ -23,7 +23,7 @@ body {
 }
 
 .main-header h1 {
-    font-size: clamp(28px, 5vw, 50px); 
+    font-size: clamp(20px, 4vw, 40px); 
     font-weight: bold;
     color: black;
     text-align: left; 
@@ -47,6 +47,7 @@ body {
     border-radius: 5px;
     border: 1px solid #ccc;
     margin-right: 5px;
+    width: 120px;
 }
 
 .seccion-agregar input[type="button"] {
@@ -83,8 +84,8 @@ body {
 
 #panel-incubadoras {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    grid-template-rows: repeat(2, 1fr); 
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
     gap: 1.5vh; 
     padding: 0 2vw 2vw 2vw; 
     flex-grow: 1;
@@ -96,12 +97,13 @@ body {
     background-color: #ffffff;
     border: 1px solid #ddd;
     border-radius: 10px;
-    padding: 1.5vh 1.2vw; 
+    padding: 1vh 1vw; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     min-height: 0; 
+    overflow: hidden;
 }
 
 #inc-2, #inc-3, #inc-4, #inc-5, #inc-6 {
@@ -115,29 +117,36 @@ body {
     margin-bottom: 5px;
     border-bottom: 2px solid #eee;
     padding-bottom: 5px;
-    font-size: 1.2rem; 
+    font-size: 1.1rem; 
+    flex-shrink: 0;
 }
 
 .datos-actuales {
     display: flex;
     justify-content: space-around;
-    margin-bottom: 5px; 
+    align-items: center;
+    flex-grow: 1;
+    margin: 5px 0; 
 }
 
 .dato {
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
 }
 
 .etiqueta {
     display: block;
-    font-size: 0.875rem;
+    font-size: 0.8rem;
     font-weight: bold;
     color: #555;
-    margin-bottom: 5px;
+    margin-bottom: 2px;
 }
 
 .valor {
-    font-size: clamp(24px, 3.5vw, 40px); 
+    font-size: clamp(1.5rem, 4vh, 3rem); 
     font-weight: 700;
     color: #333;
     transition: color 0.3s ease;
@@ -153,22 +162,22 @@ body {
 
 .dato-peso {
     text-align: center;
-    margin-top: 5px;
-    padding-top: 10px;
+    padding-top: 5px;
     border-top: 1px solid #f0f0f0;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
+    flex-shrink: 0;
 }
 
 .dato-peso .etiqueta {
     display: inline;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     color: #555;
     font-weight: 600;
 }
 
 .valor-peso {
     display: inline;
-    font-size: 1.1rem; 
+    font-size: 1rem; 
     font-weight: 700;
     color: #333;
     margin-left: 8px; 
@@ -176,15 +185,17 @@ body {
 
 .boton-detalles {
     display: block;
-    padding: 10px 15px;
-    margin-top: auto; 
+    padding: 8px 10px;
+    margin-top: 5px; 
     background-color: #007bff;
     color: white;
     text-decoration: none;
     text-align: center;
     border-radius: 5px;
     font-weight: bold;
+    font-size: 0.9rem;
     transition: background-color 0.3s ease;
+    flex-shrink: 0;
 }
 
 .boton-detalles:hover {
@@ -193,13 +204,13 @@ body {
 
 .boton-eliminar {
     position: absolute;
-    top: 8px;
-    right: 10px;
-    width: 28px;
-    height: 28px;
-    line-height: 26px;
+    top: 5px;
+    right: 5px;
+    width: 24px;
+    height: 24px;
+    line-height: 22px;
     text-align: center;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: bold;
     color: #aaa;
     background-color: #f0f0f0;
@@ -225,4 +236,14 @@ body {
 .incubadora-card.alarma-global {
     border-color: #dc3545; 
     animation: parpadeo-alarma 1.5s infinite ease-in-out;
+}
+
+@media (max-width: 768px) {
+    body { height: auto; overflow: auto; }
+    #panel-incubadoras {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        height: auto;
+    }
 }

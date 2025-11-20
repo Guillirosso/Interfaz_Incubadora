@@ -3,23 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tendencias Incubadora</title>
+    <title>Tendencias de Incubadora</title>
     <link rel="stylesheet" href="styleTendencias.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
 
-    <header class="main-header">
+    <header>
+        <h1>Tendencias Incubadora: <span id="incubadora-id-display">(Cargando...)</span></h1>
         <div class="header-controles">
-            <h1>Tendencias Incubadora: <span id="incubadora-id-display"></span></h1>
-            <div class="botones-header">
-                <button class="boton-panel" id="botonRegistroAlarmas">
-                    Registro de Alarmas
-                </button>
-                <a href="index.html" class="boton-panel">
-                    ← Volver al Panel
-                </a>
+            <div class="selector-grupo">
+                <label for="selectorRango">Rango:</label>
+                <select id="selectorRango">
+                    <option value="3">Últimos 30 min</option>
+                    <option value="6">Última 1 hora</option>
+                    <option value="36">Últimas 6 horas</option>
+                    <option value="144">Últimas 24 horas</option>
+                    <option value="all" selected>Todo el historial</option>
+                </select>
             </div>
+            <button id="botonRegistroAlarmas">Ver Alarmas</button>
+            <a href="index.html" class="boton-volver"> ← Volver al Panel</a>
         </div>
     </header>
 
@@ -28,37 +32,35 @@
             <h2>Temperatura del Aire (°C)</h2>
             <canvas id="graficoTempAire"></canvas>
         </div>
-
         <div class="grafico-card">
             <h2>Temperatura de Piel (°C)</h2>
             <canvas id="graficoTempPiel"></canvas>
         </div>
-
         <div class="grafico-card">
             <h2>Humedad (%)</h2>
             <canvas id="graficoHumedad"></canvas>
         </div>
-
         <div class="grafico-card">
             <div class="grafico-header">
                 <h2>Historial de Peso</h2>
-                <a href="balanza.html" class="boton-pesar">Tutorial</a>
+                <a href="balanza.html" class="boton-pesar">Pesar</a>
             </div>
             <canvas id="graficoPeso"></canvas>
         </div>
     </main>
 
-    <div id="modal-backdrop">
-        <div id="modal-alarma">
-            <button id="modal-cerrar-btn">×</button>
-            <h2>Registro de Alarmas</h2>
-            <div id="contenido-alarma">
-                <p>Cargando...</p>
+    <div id="modal-backdrop" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.5); z-index:1000; justify-content:center; align-items:center;">
+        <div style="background:white; padding:20px; border-radius:8px; width:80%; max-height:80%; overflow-y:auto;">
+            <div style="display:flex; justify-content:space-between; margin-bottom:15px;">
+                <h2 style="margin:0;">Registro de Alarmas</h2>
+                <button id="modal-cerrar-btn" style="background:none; border:none; font-size:1.5rem; cursor:pointer;">&times;</button>
             </div>
+            <div id="contenido-alarma">Cargando...</div>
         </div>
     </div>
+    <style>.mostrar { display: flex !important; }</style>
 
+    <audio id="alarma-sonora" src="alarma.mp3" loop preload="auto"></audio>
     <script src="javaScript.js"></script>
-    
 </body>
 </html>
