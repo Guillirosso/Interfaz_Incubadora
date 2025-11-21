@@ -117,7 +117,7 @@ body {
     margin-bottom: 5px;
     border-bottom: 2px solid #eee;
     padding-bottom: 5px;
-    font-size: 1.1rem; 
+    font-size: 2rem; 
     flex-shrink: 0;
 }
 
@@ -139,14 +139,14 @@ body {
 
 .etiqueta {
     display: block;
-    font-size: 0.8rem;
+    font-size: 1.3rem;
     font-weight: bold;
     color: #555;
     margin-bottom: 2px;
 }
 
 .valor {
-    font-size: clamp(1.5rem, 4vh, 3rem); 
+    font-size: clamp(30px, 5vw, 45px); 
     font-weight: 700;
     color: #333;
     transition: color 0.3s ease;
@@ -170,14 +170,14 @@ body {
 
 .dato-peso .etiqueta {
     display: inline;
-    font-size: 0.85rem;
+    font-size: 1.5rem;
     color: #555;
     font-weight: 600;
 }
 
 .valor-peso {
     display: inline;
-    font-size: 1rem; 
+    font-size: 2rem; 
     font-weight: 700;
     color: #333;
     margin-left: 8px; 
@@ -193,7 +193,7 @@ body {
     text-align: center;
     border-radius: 5px;
     font-weight: bold;
-    font-size: 0.9rem;
+    font-size: 1.8rem;
     transition: background-color 0.3s ease;
     flex-shrink: 0;
 }
