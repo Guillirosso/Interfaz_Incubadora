@@ -9,9 +9,9 @@ float temp_aire = 0.0;
 float temp_piel = 0.0;
 float humedad = 0.0;
 
-const char* ssid     = "TeleCentro-5e16";//"San lorenzo el mas grande"; //"Galaxy A52 CB08";
-const char* password = "pablo2020";//"aaa12345";//"gouu2562";
-const char* host     = "192.168.0.44";//"10.204.168.47";//"192.168.6.47";
+const char* ssid     = "iPhone de Guilli";//"San lorenzo el mas grande"; //"Galaxy A52 CB08";
+const char* password = "12345678";//"aaa12345";//"gouu2562";
+const char* host     = "172.20.10.4";//"10.204.168.47";//"192.168.6.47";
 const uint16_t httpPort = 80;
 const char* script   = "/ESP8266/index.php";
 
